@@ -81,7 +81,7 @@ a img, a img:hover {
 @media screen and (max-width: 767px) {
   .isaac {
     top: 8%;
-    font-size: 1.6em;
+    font-size: 2em;
     padding-bottom: 2%;
   }
 }
@@ -228,7 +228,7 @@ nav, #darknav {
 
 @media (max-width: 767px) {
 .contactinfo {
-font-size: 0.4em;
+font-size: 0.5em;
 	}
 }
 
@@ -444,7 +444,7 @@ tr:hover {
 }
 
 .currently {
-  font-size: 1em;
+  font-size: 1.4em;
   z-index: 999;
   margin: 0 auto; /* Set the left and right margins to "auto" */
   text-align: center;
@@ -477,11 +477,6 @@ tr:hover {
   background-color: rgb(232, 232, 232);
   border-top: 1px solid black;
 }
-
-
-
-
-
 
 @keyframes scrollText {
   0% {
