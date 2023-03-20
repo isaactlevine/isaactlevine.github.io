@@ -81,7 +81,7 @@ a img, a img:hover {
 @media screen and (max-width: 767px) {
   .isaac {
     top: 8%;
-    font-size: 1.8em;
+    font-size: 1em;
     padding-bottom: 2%;
   }
 }
