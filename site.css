@@ -226,6 +226,12 @@ nav, #darknav {
   z-index: 500;
 }
 
+@media (max-width: 767px) {
+.contactinfo {
+font-size: 0.4em;
+	}
+}
+
 .contactinfo ul {
   padding: 0;
   padding-bottom: 2%;
