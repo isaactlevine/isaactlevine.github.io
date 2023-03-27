@@ -98,7 +98,7 @@ nav, #darknav {
 }
 
 .nav ul li a, .nav ul li a:visited, .contactinfo ul li a, .contactinfo ul li a:visited, #tableofcontents ul li a, #tableofcontents ul li a:visited, a:hover #bio, #darknav ul li a {
-  font-size: 1.3em;
+  font-size: 1.5em;
 }
 
 .navheader {
@@ -208,9 +208,9 @@ nav, #darknav {
 
 .contactinfo {
   font-family: 'neue-haas-unica-pro-regular', Arial, sans-serif;
-  font-size: .6em;
+  font-size: .7em;
   position: fixed;
-  top: 10px;
+  top: 5px;
   left: 200px;
   z-index: 999;
   overflow: hidden;
