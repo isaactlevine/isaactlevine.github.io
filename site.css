@@ -189,6 +189,11 @@ nav, #darknav {
   overflow-y: auto;
 }
 
+@media only screen and (max-width: 767px) {
+  .bottom-wrapper {
+  width: 100%;
+  }
+  }
 
 #bio {
   top: 20%;
@@ -219,11 +224,13 @@ nav, #darknav {
 
 
 
-/* @media (max-width: 767px) {
+@media (max-width: 767px) {
 .contactinfo {
-font-size: 0.5em;
+  top: 6px;
+  left: 190px;
+  font-size: 0.5em;
 	}
-} */
+}
 
 .contactinfo ul {
   padding: 0;
