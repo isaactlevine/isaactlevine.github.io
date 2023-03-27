@@ -189,7 +189,7 @@ nav, #darknav {
   overflow-y: auto;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 700px) {
   .bottom-wrapper {
   width: 100%;
   }
@@ -224,10 +224,10 @@ nav, #darknav {
 
 
 
-@media (max-width: 767px) {
+@media (max-width: 600px) {
 .contactinfo {
   top: 6px;
-  left: 190px;
+  left: 180px;
   font-size: 0.5em;
 	}
 }
