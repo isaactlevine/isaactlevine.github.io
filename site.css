@@ -44,7 +44,7 @@
 
 
 body {
-	background-color: #fefefe;
+	background: linear-gradient(90deg, hsla(240, 100%, 97%, 1) 0%, hsla(0, 0%, 100%, 1) 100%);
     font-family: 'Merchant Copy Doublesize', Arial, sans-serif;
     font-size: 13px;
     color: rgba(60, 60, 60);
@@ -68,23 +68,15 @@ a img, a img:hover {
 
 
 .isaac {
-  font-family: 'bookish-off-white-regular', Arial, sans-serif;
-  font-size: 3em;
+  font-family: 'Merchant Copy Doublesize', Arial, sans-serif;
+  font-weight: normal;
+  font-size: 1.1em;
   z-index: 999;
   position: fixed;
-  top:7%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top:6px;
+  left: 20px;
 }
 
-/* Media query for mobile devices */
-@media screen and (max-width: 767px) {
-  .isaac {
-    top: 8%;
-    font-size: 2em;
-    padding-bottom: 2%;
-  }
-}
 
 
 
@@ -109,6 +101,16 @@ nav, #darknav {
   font-size: 1.3em;
 }
 
+.navheader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 27px;
+  z-index: 999; /* Set a high z-index value */
+  background-color: rgb(255, 255, 255);
+}
+
 
 
 .bio_text_container {
@@ -130,7 +132,6 @@ nav, #darknav {
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: whitesmoke;
   animation: fadeInAnimation ease 1.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -183,18 +184,9 @@ nav, #darknav {
 
 .bottom-wrapper {
   position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  width: 40%;
+  top: 10px;
+  width: 60%;
   overflow-y: auto;
-}
-
-/* Media query for mobile devices */
-@media (max-width: 767px) {
-  .bottom-wrapper {
-    width: 80%; /* Change the width to 80% for screens smaller than 768px */
-  }
 }
 
 
@@ -215,22 +207,23 @@ nav, #darknav {
 
 
 .contactinfo {
+  font-family: 'neue-haas-unica-pro-regular', Arial, sans-serif;
   font-size: .6em;
   position: fixed;
-  top: 13%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 200;
+  top: 10px;
+  left: 200px;
+  z-index: 999;
   overflow: hidden;
   white-space: nowrap;
-  z-index: 500;
 }
 
-@media (max-width: 767px) {
+
+
+/* @media (max-width: 767px) {
 .contactinfo {
 font-size: 0.5em;
 	}
-}
+} */
 
 .contactinfo ul {
   padding: 0;
@@ -240,13 +233,17 @@ font-size: 0.5em;
 
 .contactinfo li {
   display: flex; /* Set display property to flex */
-  justify-content: center; /* Center contents horizontally */
+  justify-content: left; /* Center contents horizontally */
 }
 
 .contactinfo li {
   display: inline-block;
   margin-right: 10px;
 }
+.contactinfo a {
+  font-weight: normal;
+}
+
 
 
 
@@ -255,9 +252,8 @@ font-size: 0.5em;
   font-size: .6em;
   display: inline-block;
   position: fixed;
-  top: 18%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 17%;
+  left: 5%;
   z-index: 200;
   overflow: hidden;
   white-space: nowrap;
@@ -365,16 +361,7 @@ tr:hover {
   height: 200px; /* Set the height of the container so it doesn't collapse */
 }
 
-#header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 20%;
-  z-index: 150;
-  background-color: rgb(232, 232, 232);
-  border-bottom: 1px solid black;
-}
+
 
 
 
@@ -389,56 +376,6 @@ tr:hover {
   text-align: center;
 }
 
-/* Default styles */
-.toc {
-  font-size: .8em;
-  position: fixed;
-  top: 50%;
-  left: 22%;
-  z-index: 999;
-}
-
-.toc ul {
-  /* Add these styles to display the list horizontally */
-  display: flex;
-  flex-direction: row;
-  margin: 0;
-  padding: 0;
-}
-
-.toc li {
-  margin-right: 10px;
-}
-
-/* Styles for non-mobile devices */
-@media screen and (min-width: 768px) {
-  .toc ul {
-    flex-direction: column; /* Arrange list items vertically */
-  }
-}
-
-/* Styles for mobile devices */
-@media screen and (max-width: 767px) {
-  .toc {
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-  }
-}
-
-
-
-
-.toc ul {
-  list-style: none;
-  padding-left: 0;
-}
-.toc li {
-  margin-bottom: 10px;
-}
-
 .bio_text p:first-child {
   font-family: "bookish-off-white-regular";
 }
@@ -448,6 +385,7 @@ tr:hover {
   z-index: 999;
   margin: 0 auto; /* Set the left and right margins to "auto" */
   text-align: center;
+  left: 50%;
 }
 
 #screenshot_text {
@@ -472,10 +410,9 @@ tr:hover {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 3.5%;
-  z-index: 998; /* Set a high z-index value */
-  background-color: rgb(232, 232, 232);
-  border-top: 1px solid black;
+  height: 25px;
+  z-index: 999; /* Set a high z-index value */
+  background-color: rgb(255, 255, 255);
 }
 
 @keyframes scrollText {
