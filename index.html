@@ -90,47 +90,6 @@
 </div>
 
 
-
-<div id="screenshot_text" data-length="0">
-  <div>
-    <script>
-      fetch("output.txt?" + Date.now())
-        .then(response => response.text())
-        .then(data => {
-          const screenshotText = document.getElementById("screenshot_text");
-          screenshotText.innerHTML = data;
-          screenshotText.setAttribute("data-length", data.length);
-
-          const containerWidth = screenshotText.offsetWidth;
-          const textWidth = screenshotText.scrollWidth;
-          const duration = (textWidth + containerWidth) / 0.1;
-
-          // Change the initial position to the right side of the screen
-          screenshotText.style.transform = `translateX(${containerWidth}px)`;
-
-          let start = null;
-          function animate(timestamp) {
-            if (!start) start = timestamp;
-            const progress = (timestamp - start) / duration;
-            screenshotText.style.transform = `translateX(${containerWidth - (containerWidth + textWidth) * progress}px)`;
-            if (progress < 1) {
-              requestAnimationFrame(animate);
-            } else {
-              start = null;
-              screenshotText.style.transform = `translateX(${containerWidth}px)`; // Reset to initial position
-              requestAnimationFrame(animate);
-            }
-          }
-          requestAnimationFrame(animate);
-        })
-        .catch(error => {
-          console.error(error);
-        });
-    </script>
-  </div>
-</div>
-
-<div class="footer"></div>
 <script src= "/js/script.js"></script>
 </body>
 </html>
