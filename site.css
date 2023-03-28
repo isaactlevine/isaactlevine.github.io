@@ -508,3 +508,8 @@ tr:hover {
     font-size: 1em;
   }
 }
+
+img {
+  width: 50%;
+  height: 50%;
+}
