@@ -530,3 +530,8 @@ img {
   width: 50%;
   height: 50%;
 }
+
+.project_themes{
+  margin-left: 10px;
+  font-size: .8em;
+}
