@@ -44,7 +44,7 @@
 
 
 body {
-	  background: linear-gradient(45deg, hsla(48, 60%, 90%, 1) 0%, hsla(0, 0%, 100%, 1) 100%);
+  background: linear-gradient(90deg, hsla(49, 100%, 93%, 1) 0%, hsla(0, 0%, 100%, 1) 100%);
     font-family: 'Merchant Copy Doublesize', Arial, sans-serif;
     font-size: 13px;
     color: rgba(60, 60, 60);
@@ -75,6 +75,7 @@ a img, a img:hover {
   position: fixed;
   top:6px;
   left: 20px;
+  background-color: white;
 }
 
 
@@ -86,7 +87,7 @@ ul {
 }
 
 
-.nav a:hover, .contactinfo a:hover, #tableofcontents a:hover, #darknav a:hover, .projects a:hover, #IID a:hover {
+.nav a:hover, .contactinfo a:hover, #tableofcontents a:hover, #darknav a:hover, .bio_text a:hover, .projects a:hover, #IID a:hover {
 	color: #666;
 }
 
@@ -102,7 +103,7 @@ nav, #darknav {
 }
 
 .navheader {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
@@ -126,7 +127,9 @@ nav, #darknav {
   font-family: 'neue-haas-unica-pro-regular', Arial, sans-serif;
   z-index: 100;
   font-size: 15px;
+  font-weight: normal;
   line-height: 1.3em;
+  margin-left: 30px;
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -137,6 +140,29 @@ nav, #darknav {
   animation-fill-mode: forwards;
 }
 
+.full_bio_text {
+  font-family: 'neue-haas-unica-pro-regular', Arial, sans-serif;
+  z-index: 100;
+  margin-left: 30px;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.3em;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  animation: fadeInAnimation ease 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  background-color: rgba(229, 229, 229, 0.3); /* semi-transparent light grey */
+  border-radius: 10px; /* rounded corners */
+}
+
+
+a {
+  font-weight: normal;
+}
 
 
 /* Add a new class for the fading effect */
@@ -191,7 +217,8 @@ nav, #darknav {
 
 @media only screen and (max-width: 700px) {
   .bottom-wrapper {
-  width: 100%;
+  width: 80%;
+  margin-top: 10%;
   }
   }
 
@@ -227,7 +254,7 @@ nav, #darknav {
 @media (max-width: 600px) {
 .contactinfo {
   top: 6px;
-  left: 170px;
+  left: 180px;
   font-size: 0.5em;
 	}
 }
@@ -428,5 +455,56 @@ tr:hover {
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+.project_text {
+  font-family: 'neue-haas-unica-pro-regular', Arial, sans-serif;
+  z-index: 999;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.3em;
+  width: 60%;
+  margin-top: 7.5%;
+  margin-left: 12%;
+  /* height: 400px;
+  overflow-y: scroll; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  animation: fadeInAnimation ease 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  justify-content: center; /* Center the element horizontally */
+  text-align: left; /* Align the text to the left */
+  background-color: rgba(229, 229, 229, 0.3); /* semi-transparent light grey */
+  border-radius: 10px; /* rounded corners */
+}
+
+.project_title {
+  font-family: "bookish-off-white-regular", Arial, sans-serif;
+  font-size: 2em;
+  margin-bottom: 1%;
+}
+
+
+.project_date {
+  font-family: 'neue-haas-unica-pro-regular', Arial, sans-serif;
+  font-size: 1.2em;
+  margin-bottom: 5%;
+}
+
+@media (max-width: 768px) {
+  .project_title {
+    font-size: 1.5em;
+  }
+
+  .project_text {
+    margin-top: 12%;
+  }
+  
+  .project_date {
+    font-size: 1em;
   }
 }
