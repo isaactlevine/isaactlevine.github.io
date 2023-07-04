@@ -1,15 +1,4 @@
 @font-face {
-	font-family: 'Inter Tight, Arial, sans-serif';
-	font-weight: normal;
-	font-style: normal;
-	src: url('/InterTight-Regular.woff') format('woff'), /* Pretty Modern Browsers */
-	url('/InterTight-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
-	url('/InterTight-Regular.svg') format('svg');
-	/* Legacy iOS */
-}
-
-
-@font-face {
   font-family: "Merchant Copy Doublesize";
   font-weight:normal;
   font-style:normal;
@@ -32,14 +21,6 @@
   src: url('/bookish-off-white-regular.ttf') format("truetype");
 }
 
-@keyframes fadeInAnimation {
-  0% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-   }
-}
 
 
 
@@ -49,8 +30,6 @@ body {
     font-size: 13px;
     color: rgba(60, 60, 60);
     text-align: left;
-    width: 1000px; /* set the width of the webpage */
-    height: 800px; /* set the height of the webpage */
     overflow: auto; /* allow scrolling */
 }
 
@@ -78,14 +57,9 @@ a img, a img:hover {
   background-color: white;
 }
 
-
-
-
-
 ul {
   list-style: none;
 }
-
 
 .nav a:hover, .contactinfo a:hover, #tableofcontents a:hover, #darknav a:hover, .bio_text a:hover, .projects a:hover, #IID a:hover {
 	color: #666;
@@ -113,35 +87,11 @@ nav, #darknav {
 }
 
 
-
-.bio_text_container {
-  position: relative;
-  z-index: 999;
-  margin-top: 5%; /* Fixed typo */
-  display: flex;
-  width: 100%;
-}
-
-.bio_text {
-  font-family: 'neue-haas-unica-pro-regular', Arial, sans-serif;
-  z-index: 100;
-  font-size: 15px;
-  font-weight: normal;
-  line-height: 1.3em;
-  width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  animation: fadeInAnimation ease 1.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
 .full_bio_text {
   font-family: 'neue-haas-unica-pro-regular', Arial, sans-serif;
   z-index: 100;
-  margin-left: 30px;
+  margin-left: 5%;
+  margin-top: 5%;
   font-size: 15px;
   font-weight: normal;
   line-height: 1.3em;
@@ -150,108 +100,48 @@ nav, #darknav {
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
-  animation: fadeInAnimation ease 1.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
   background-color: rgba(229, 229, 229, 0.3); /* semi-transparent light grey */
   border-radius: 10px; /* rounded corners */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
-.full_project_text {
-  font-family: 'neue-haas-unica-pro-regular', Arial, sans-serif;
-  z-index: 100;
-  font-size: 15px;
-  font-weight: normal;
-  line-height: 1.3em;
-  width: 50%;
-  margin-left: 12px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  animation: fadeInAnimation ease 1.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  background-color: rgba(229, 229, 229, 0.3); /* semi-transparent light grey */
-  border-radius: 10px; /* rounded corners */
+/* If screen size is 600px or less, set the width to 100% */
+@media screen and (max-width: 600px) {
+  .full_bio_text {
+    margin-top: 10%;
+    width: 80%;
+  }
+  img {
+    margin-top: 3%;
+    width: 80%; /* Adjust the percentage value to your desired size */
+    height: auto;
+    margin-left: 5%;
+  }
 }
+
+/* If screen size is between 601px and 900px, set the width to 80% */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .full_bio_text {
+    width: 80%;
+  }
+  
+}
+
+/* If screen size is larger than 900px, set the width to 60% */
+@media screen and (min-width: 901px) {
+  .full_bio_text {
+    width: 60%;
+  }
+}
+
+
+
 
 
 a {
   font-weight: normal;
 }
-
-
-/* Add a new class for the fading effect */
-.bio_fade {
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-}
-
-/* Apply the fading effect to the text when the user scrolls past the nav */
-.bio_fade.fade_out .bio_text {
-  opacity: 0.5;
-}
-
-#CV_link {
-  font-family: 'neue-haas-unica-pro-regular', Arial, sans-serif;
-  font-weight: normal;
-}
-
-#ToftH_link {
-  font-family: 'neue-haas-unica-pro-regular', Arial, sans-serif;
-  font-weight: normal;
-}
-
-@keyframes scrollText {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-.wrapper {
-  width: 100%;
-  max-width: 500px;
-  height: 100%;
-  z-index: 200;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: left;
-}
-
-
-.bottom-wrapper {
-  position: absolute;
-  top: 10px;
-  width: 60%;
-  overflow-y: auto;
-}
-
-@media only screen and (max-width: 700px) {
-  .bottom-wrapper {
-  width: 80%;
-  margin-top: 10%;
-  }
-  }
-
-#bio {
-  top: 20%;
-}
-
-
-
-
-
-
-.projects a {
-  font-weight: normal;
-}
-
 
 
 
@@ -295,243 +185,25 @@ a {
   font-weight: normal;
 }
 
-
-
-
-
-.copyright {
-  font-size: .6em;
-  display: inline-block;
-  position: fixed;
-  top: 17%;
-  left: 5%;
-  z-index: 200;
-  overflow: hidden;
-  white-space: nowrap;
-  z-index: 500;
-}
-
-
-
-
-
-
-
-
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-}
-
-table {
-  position: fixed;
-  left: 640px;
-  top: 210px;
-  transform: translate(-50%, -50%); /* Center the table horizontally and vertically */
-  border-collapse: collapse;
-}
-
-td {
-  font-family: 'neue-haas-unica-pro-regular', Arial, sans-serif;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-.hidden-text {
-  display: none;
-  font-family: 'neue-haas-unica-pro-regular', Arial, sans-serif;
-  position: fixed;
-  top: 10%;
-  width: 50%;
-  max-width: 500px;
-  min-width: 300px;
-  height: 600px;
-  padding: 20px;
-  left: 800px;
-  box-sizing: border-box;
-  z-index: 9999;
-  overflow-y: scroll;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 tr:hover {
   background-color: #f2f2f2;
 }
 
 
-.animated-text {
-  font-family: 'neue-haas-unica-pro-regular', Arial, sans-serif;
-  font-size: .8rem;
-  overflow: hidden;
-  position: fixed;
-  bottom: 100px;
-  left: 600px;
-  width: 300px; /* Change this value to adjust the width */
-  }
-
-.animated-text span {
-  display: inline-block;
-  transform-origin: 50% 50%;
-  opacity: 0;
-  animation-name: spin-fade;
-  animation-duration: 1s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-}
-
-@keyframes spin-fade {
-  0% {
-    opacity: 0;
-    transform: translateX(-50%) rotateY(0deg);
-  }
-  50% {
-    opacity: 0.5;
-    transform: translateX(-50%) rotateY(180deg);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(-50%) rotateY(360deg);
-  }
-}
-
-
-.scroll-container {
-  height: 200px; /* Set the height of the container so it doesn't collapse */
-}
-
-
-
-
-
-.windowcontainer {
-  width: 2000px; /* set a fixed width */
-}
-
-#section-1 {
-  font-family: "Merchant Copy Doublesize";
-  font-weight:normal;
-  font-style:normal;
-  text-align: center;
-}
-
-.bio_text p:first-child {
-  font-family: "bookish-off-white-regular";
-}
-
-.currently {
-  font-size: 1.4em;
-  z-index: 999;
-  margin: 0 auto; /* Set the left and right margins to "auto" */
-  text-align: center;
-  left: 50%;
-}
-
-#screenshot_text {
-  font-family: 'neue-haas-unica-pro-regular', Arial, sans-serif;
-  z-index: 999;
-  font-size: 15px;
-  line-height: 1.3em;
-  white-space: nowrap;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  overflow: hidden;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
-  direction: rtl; /* added to change text direction */
-}
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 25px;
-  z-index: 999; /* Set a high z-index value */
-  background-color: rgb(255, 255, 255);
-}
-
-@keyframes scrollText {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-.project_text {
-  font-family: 'neue-haas-unica-pro-regular', Arial, sans-serif;
-  z-index: 999;
-  font-size: 15px;
-  font-weight: normal;
-  line-height: 1.3em;
-  width: 55%;
-  margin-top: 7.5%;
-  margin-left: 12%;
-  /* height: 400px;
-  overflow-y: scroll; */
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  animation: fadeInAnimation ease 1.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  justify-content: center; /* Center the element horizontally */
-  text-align: left; /* Align the text to the left */
-  background-color: rgba(229, 229, 229, 0.3); /* semi-transparent light grey */
-  border-radius: 10px; /* rounded corners */
-}
-
-.project_title {
-  font-family: "bookish-off-white-regular", Arial, sans-serif;
-  font-size: 2em;
-  margin-bottom: 1%;
-}
-
-
-.project_date {
-  font-family: 'neue-haas-unica-pro-regular', Arial, sans-serif;
-  font-size: 1.2em;
-  margin-bottom: 5%;
-}
-
-@media (max-width: 768px) {
-  .project_title {
-    font-size: 1.5em;
-  }
-
-  .project_text {
-    margin-top: 12%;
-  }
-  
-  .project_date {
-    font-size: 1em;
-  }
-}
-
 img {
-  width: 50%;
-  height: 50%;
+  margin-top: 2%;
+  max-width: 100%;
+  height: auto; /* maintain aspect ratio */
+  display: block; /* center image */
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.project_themes{
-  margin-left: 10px;
-  font-size: .8em;
+@media (min-width: 601px) {
+  img {
+    max-width: 50%;
+    margin-left: 5%;
+  }
 }
+
+
