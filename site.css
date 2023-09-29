@@ -1,209 +1,88 @@
-@font-face {
-  font-family: "Merchant Copy Doublesize";
-  font-weight:normal;
-  font-style:normal;
-  src: url('/Merchant_Copy_Doublesize.woff') format("woff"),
-  url('/Merchant_Copy_Doublesize.ttf') format("truetype"),
-  url('/Merchant_Copy_Doublesize.svg') format("svg");
-}
-
-@font-face {
-  font-family: "neue-haas-unica-pro-regular";
-  font-weight:normal;
-  font-style:normal;
-  src: url('/neue-haas-unica-pro-regular.ttf') format("truetype");
-}
-
-@font-face {
-  font-family: "bookish-off-white-regular";
-  font-weight:normal;
-  font-style:normal;
-  src: url('/bookish-off-white-regular.ttf') format("truetype");
-}
-
-
-
-
 body {
-  background: linear-gradient(90deg, hsla(49, 100%, 93%, 1) 0%, hsla(0, 0%, 100%, 1) 100%);
-    font-family: 'Merchant Copy Doublesize', Arial, sans-serif;
-    font-size: 13px;
-    color: rgba(60, 60, 60);
-    text-align: left;
-    overflow: auto; /* allow scrolling */
-}
-
-
-
-a, a:visited, a:active {
-	text-decoration: none;
-	font-weight: bold;
-	color:  rgb(0, 0, 0);
-}
-
-a img, a img:hover {
-	text-decoration: none;
-}
-
-
-.isaac {
-  font-family: 'Merchant Copy Doublesize', Arial, sans-serif;
-  font-weight: normal;
-  font-size: 1.1em;
-  z-index: 999;
-  position: fixed;
-  top:6px;
-  left: 20px;
-  background-color: white;
-}
-
-ul {
-  list-style: none;
-}
-
-.nav a:hover, .contactinfo a:hover, #tableofcontents a:hover, #darknav a:hover, .bio_text a:hover, .projects a:hover, #IID a:hover {
-	color: #666;
-}
-
-nav, #darknav {
-	z-index: 200;
-	line-height: 1.5em;
-	width: 100%;
-	background-color: none;
-}
-
-.nav ul li a, .nav ul li a:visited, .contactinfo ul li a, .contactinfo ul li a:visited, #tableofcontents ul li a, #tableofcontents ul li a:visited, a:hover #bio, #darknav ul li a {
-  font-size: 1.5em;
-}
-
-.navheader {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 27px;
-  z-index: 999; /* Set a high z-index value */
-  background-color: rgb(255, 255, 255);
-}
-
-
-.full_bio_text {
-  font-family: 'neue-haas-unica-pro-regular', Arial, sans-serif;
-  z-index: 100;
-  margin-left: 5%;
-  margin-top: 5%;
-  font-size: 15px;
-  font-weight: normal;
-  line-height: 1.3em;
-  width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: rgba(229, 229, 229, 0.3); /* semi-transparent light grey */
-  border-radius: 10px; /* rounded corners */
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-}
-
-/* If screen size is 600px or less, set the width to 100% */
-@media screen and (max-width: 600px) {
-  .full_bio_text {
-    margin-top: 10%;
-    width: 80%;
-  }
-  img {
-    margin-top: 3%;
-    width: 80%; /* Adjust the percentage value to your desired size */
-    height: auto;
-    margin-left: 5%;
-  }
-}
-
-/* If screen size is between 601px and 900px, set the width to 80% */
-@media screen and (min-width: 601px) and (max-width: 900px) {
-  .full_bio_text {
-    width: 80%;
-  }
-  
-}
-
-/* If screen size is larger than 900px, set the width to 60% */
-@media screen and (min-width: 901px) {
-  .full_bio_text {
-    width: 60%;
-  }
-}
-
-
-
-
-
-a {
-  font-weight: normal;
-}
-
-
-
-.contactinfo {
-  font-family: 'neue-haas-unica-pro-regular', Arial, sans-serif;
-  font-size: .7em;
-  position: fixed;
-  top: 3px;
-  left: 200px;
-  z-index: 999;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-
-
-@media (max-width: 600px) {
-.contactinfo {
-  top: 6px;
-  left: 180px;
-  font-size: 0.5em;
-	}
-}
-
-.contactinfo ul {
+  background: #fff;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  margin: 0;
   padding: 0;
-  padding-bottom: 2%;
+  font-size: 0.9em;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.header {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.header h1 {
+  font-size: 1.8em;
   margin: 0;
 }
 
-.contactinfo li {
-  display: flex; /* Set display property to flex */
-  justify-content: left; /* Center contents horizontally */
+.contactinfo ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  text-align: left;
 }
 
 .contactinfo li {
   display: inline-block;
   margin-right: 10px;
 }
+
 .contactinfo a {
-  font-weight: normal;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9em;
 }
 
-tr:hover {
-  background-color: #f2f2f2;
+.contactinfo a:hover {
+  text-decoration: underline;
+}
+
+.bio p {
+  margin: 10px 0;
+  text-align: left;
+}
+
+.bio ul {
+  padding-left: 20px;
+  list-style: none;
+}
+
+.bio li {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.bio li::before {
+  content: "-";
+  position: absolute;
+  left: -1em;
+}
+
+.bio li ul {
+  margin-top: 10px; /* Adjust this value as needed */
+  margin-left: 20px;
+  padding-left: 20px;
 }
 
 
-img {
-  margin-top: 2%;
-  max-width: 100%;
-  height: auto; /* maintain aspect ratio */
-  display: block; /* center image */
-  margin-left: auto;
-  margin-right: auto;
+
+.bio li ul li::before {
+  content: "-";
+  position: absolute;
+  left: -1em;
 }
 
-@media (min-width: 601px) {
-  img {
-    max-width: 50%;
-    margin-left: 5%;
-  }
+.image img {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 20px 0;
 }
-
-
