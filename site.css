@@ -1,14 +1,56 @@
+
+@font-face {
+  font-family: 'Akzidenz-grotesk-bold';
+  src: url('Akzidenz-grotesk-bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Akzidenz-grotesk-light';
+  src: url('Akzidenz-grotesk-light.ttf') format('truetype');
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  animation: fadeIn 1s ease-in;
+}
+
+
+
+/* Apply Akzidenz-grotesk-light to specific elements */
+h1 {
+  font-family: 'Akzidenz-grotesk-bold', sans-serif;
+}
+
+.blurb p {
+  font-family: 'Akzidenz-grotesk-bold', sans-serif;
+}
+
+
 body {
   background: #fff;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Akzidenz-grotesk-bold', sans-serif;  /* Set default to Akzidenz-grotesk-bold */
   color: #333;
   margin: 0;
   padding: 0;
   font-size: 0.9em;
 }
 
+/* Override for h1 and contact info */
+h1, .contactinfo ul, .contactinfo li, .contactinfo a {
+  font-family: 'Akzidenz-grotesk-light', sans-serif;  /* Set to Akzidenz-grotesk-light */
+}
+
+
 .container {
-  max-width: 600px;
+  max-width: 650px;
   margin: auto;
   padding: 20px;
 }
@@ -24,6 +66,7 @@ body {
 }
 
 .contactinfo ul {
+  font-family: 'Akzidenz-grotesk-bold', sans-serif;
   list-style: none;
   padding: 0;
   margin: 10px 0 0 0;
@@ -31,6 +74,7 @@ body {
 }
 
 .contactinfo li {
+  font-family: 'Akzidenz-grotesk-bold', sans-serif;
   display: inline-block;
   margin-right: 10px;
 }
@@ -39,6 +83,7 @@ body {
   text-decoration: none;
   color: #333;
   font-size: 0.9em;
+  font-family: 'Akzidenz-grotesk-bold', sans-serif;
 }
 
 .contactinfo a:hover {
@@ -46,11 +91,13 @@ body {
 }
 
 .bio p {
+  font-family: 'Akzidenz-grotesk-light', sans-serif;
   margin: 10px 0;
   text-align: left;
 }
 
 .bio ul {
+  font-family: 'Akzidenz-grotesk-light', sans-serif;
   padding-left: 20px;
   list-style: none;
 }
@@ -85,4 +132,137 @@ body {
   height: auto;
   display: block;
   margin: 20px 0;
+}
+
+.toggle {
+  cursor: pointer;
+}
+
+.bio p {
+  margin-bottom: 16px;
+}
+
+.bio .indent {
+  margin-left: 20px;
+}
+
+.toggle-icon {
+  margin-right: 10px;
+}
+
+.blurb {
+  font-size: 16px;
+  color: #333;
+  /* line-height: 200%; */
+  /* Add more styles as needed */
+}
+
+h1 {
+  font-family: 'Akzidenz-grotesk-bold', sans-serif;
+}
+
+.blurb p {
+  font-family: 'Akzidenz-grotesk-bold', sans-serif;
+}
+
+.projects {
+  margin-top: 20px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 30px;
+  border-top: 1px solid #ccc;
+}
+
+
+.projects h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+
+.projects ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.projects ul li {
+  margin-bottom: 10px;
+}
+
+
+.project-desc {
+  font-family: 'Akzidenz-grotesk-light', sans-serif;
+}
+
+.project-title {
+  font-weight: bold;
+  background-image: url('visit_arrow.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 20px; /* Make room for the image */
+  background-size: 16px; /* Adjust size as needed */
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.blurb p.unbold {
+  font-family: 'Akzidenz-grotesk-light', sans-serif;
+}
+
+.info-box p.unbold {
+  font-family: 'Akzidenz-grotesk-light', sans-serif;
+}
+
+.project-link {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+.info-box {
+  opacity: 0;
+  width: 50%;  /* Adjust as needed */
+  height: 40%;
+  display: none;
+  position: absolute;  /* Changed from absolute to fixed for centering */
+  top: 50%;
+  left: 50%;  /* Centering on the X-axis */
+  transform: translate(-50%, -50%);  /* Combined transformations */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in;
+}
+
+.info-box-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+
+
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.info-content {
+  padding: 20px;
 }

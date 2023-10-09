@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Atelier</title>
+  <link rel="stylesheet" href="atelier_styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap">
+
+</head>
+<body>
+    <header>
+        <button class="button-60" id="login-button">User</button>
+        <div id="header-container">
+          <h1 id="header"></h1>
+          <!-- <a href="https://isaaclevine.notion.site/Human-AI-Interaction-and-The-Road-to-a-Personal-AI-dd9a1620d1964b29bc5a5247804d6fc7" target="_blank" id="paper-link">Paper</a> -->
+        </div>
+        
+        <!-- Add a container for the "Run" and "Inventory" buttons -->
+        <div class="right-buttons">
+          <button class="button-60" id="run-button">Chat</button>
+          <button class="button-60" id="inventory-button">Inventory</button>
+        </div>
+      </header>
+      
+
+  <nav class="button-container">
+    <button class="button-60" id="world-button">World</button>
+    <button class="button-60" id="disposition-button">Disposition</button>
+    <button class="button-60" id="style-button">Style and Tone</button>
+    <button class="button-60" id="actions-button">Reflections</button>
+    <button class="button-60" id="pushback-button">Accountability</button>
+  </nav>
+
+  <div id="userInfoBox" class="info-box" style="display: none;">
+    <button id="userInfoCloseButton" class="close-button"></button>
+    <p>Your user info...</p>
+    <!-- Add more elements here as per your requirement -->
+</div>
+
+
+  <div class="atelier-info-window" id="atelierinfo">
+    <span class="close-button" id="atelierinfo-close-button"></span>
+    <div id="atelier-info-content">
+        <div style="font-weight: bold; font-size: larger;">
+          This website is an experimental prototype of a piece of software called Atelier that allows for any non-technical writer, artist, or designer craft personal AIs with high resolution in natural language. Some features are not operating at the moment (10/8/23)
+        </div>
+        <p>
+          My thesis is this: deterministic computing demands products be intuitive and seamless, hence the celebrated roles of industrial designers, UI designers, and UX designers in traditional software companies.
+        </p>
+        <p>
+          AI, on the other hand, is not so deterministic. It is dialogic, open-ended, probabilistic. As such, the first principle of design for AI consumer products is not just intuition but also relationality.
+        </p>
+        <p>
+          We have to make the object of our design efforts relationships themselves: how they originate, how they change, where they are destined to go, and why. This requires learning from the relational aspects seen in human-human interaction and leaving behind the existential qualities that do not have a place in technological products, as well as leaning into what makes computation so powerful, e.g., navigation of information and speed.
+        </p>
+        <p>
+          I propose the creation of a new role - the "persona designer" - tasked with meticulously crafting AI personas that are constantly individuating, adaptive, semi-independent, and socially congenial. These designers need their own software, their own AutoCAD, Figma, and more. This website is the first step towards such software.
+        </p>
+        <div style="font-weight: bold; font-size: larger;">
+          There are (so far) at least six main vectors where the designer can craft this personal AI agent:
+        </div>
+        <ol>
+          <li>
+            <p>User onboarding (top left button)</p>
+            <ul>
+              <li>
+                Onboarding for a personal AI should resemble something more like dating (but with a very high success rate versus human-human dating). Whereas websites and apps tell you where buttons and functions are, user and personal AI should get to know each other through information-dense but casual conversation so that the personal AI can quickly individuate to the user and help them better and more quickly.
+              </li>
+              <li>
+                Ideally, this onboarding would be like going on a walk for 20 minutes and chatting with your personal AI through a meandering series of questions. However, for the purpose of this website, I give the user the opportunity to just type them in.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>World</p>
+            <ul>
+              <li>
+                Personal AIs' world is the user, but I suggest this 'world' aspect could be the information and data streams that the model accesses and specializes in on behalf of the user. If the user is a comparative literature undergraduate student, then information about contemporary Chinese and English novels are top-of-mind (or top-of-model), and this information is volunteered spontaneously by the model for the users' betterment.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>Disposition</p>
+            <ul>
+              <li>
+                Some people like blunt interlocutors. Some like sweet and agreeable ones. We trust and find companionship with people due, in part, to complementary or shared dispositions. This is where that quality can be customized; I suspect a good user research endeavor would be to find the dispositions most sought-after by different user demographics and then building versions of the personal AI accordingly. The Personal AI my grandmother would love speaking to is maybe not the Personal AI my hardcore metal-loving cousin would like speaking to.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>Style and Tone</p>
+            <ul>
+              <li>
+                Closely related to disposition, this is where the 'voice' of the AI can be specified. Academic and formal, casual and colloquial, or modeled after a specific person or writer.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>Actions and Reflections</p>
+            <ul>
+              <li>
+                AI systems have a different temporality than humans; they are 'always on.' This means that they can always think about things on your behalf, reflect on interactions and communicate these reflections, reflect on data or information you give to it, and so on. I think it could be interesting for AI systems to make stuff for themselves and for the user in order to augment the quality of the relationship. This is an opportunity for the user to get more insight from the AI, and the user can truly engage the AI by checking in on its reflections out of curiosity. Remember: the 'world' of a personal AI is its interactions with you and the data you provide it — and there is much to explore!
+              </li>
+              <li>
+                These written reflections are stored in the inventory.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>Accountability</p>
+            <ul>
+              <li>
+                I think users will trust an AI agent companion particularly when it holds you, the user, accountable. While the user should always be in control, and always the final arbiter of a decision, there is some value in carefully calibrating to what extent the personal AI should push back or nudge you to do or think differently, so long as it is according to a personal goal that you have set for yourself in the past. This section is where those goals can be set.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <p>
+          For more information, see this <a href="https://isaaclevine.notion.site/Human-AI-Interaction-and-The-Road-to-a-Personal-AI-dd9a1620d1964b29bc5a5247804d6fc7" target="_blank">link</a>.
+        </p>
+      </div>
+      
+  </div>
+  
+
+  <div class="info-box" id="infoBox">
+    <span class="close-button" id="closeButton"></span>
+    <div id="infoBoxContent"><!-- Your content will go here --></div>
+    <!-- <button class="button-60" id="save-button">Save</button> -->
+
+  </div>
+  
+
+    <div class="chat-box" id="chat-box">
+        <span class="close-button" id="chat-box-close-button"></span>
+        <div class="messages" id="messages"></div>
+        <div class="input-container">
+            <input type="text" id="input" placeholder="Type your message...">
+            <button id="send">Send</button>
+        </div>
+    </div>
+
+
+    <div class="atelier-info">
+        <!-- <img src="Assets/info-icon.png" alt="Info Icon" class="info-icon"> -->
+        <span class="atelier-text">Click here for more information</span>
+      </div>
+      
+      
+  
+<script src="atelier_script.js"></script>
+
+
+
+</body>
+</html>
