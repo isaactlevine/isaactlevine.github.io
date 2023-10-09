@@ -132,6 +132,7 @@ h1, .contactinfo ul, .contactinfo li, .contactinfo a {
   height: auto;
   display: block;
   margin: 20px 0;
+  margin-bottom: 150px; 
 }
 
 .toggle {
@@ -153,6 +154,8 @@ h1, .contactinfo ul, .contactinfo li, .contactinfo a {
 .blurb {
   font-size: 16px;
   color: #333;
+  margin-bottom: 50px;
+  margin-top: 300px;
   /* line-height: 200%; */
   /* Add more styles as needed */
 }
@@ -166,11 +169,12 @@ h1 {
 }
 
 .projects {
-  margin-top: 20px;
+  margin-top: 400px;
   padding-left: 0;
   padding-right: 0;
   padding-top: 30px;
-  border-top: 1px solid #ccc;
+  /* border-top: 1px solid #ccc; */
+  margin-bottom: 50px; 
 }
 
 
@@ -288,4 +292,37 @@ h1 {
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
   z-index: 1; /* Place it above other elements but below the info-box */
   display: none; /* Hidden by default */
+}
+
+.bio-wrapper {
+  margin-top: 400px; 
+}
+
+.header h1, .contactinfo {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  margin-top: 10px;
+}
+
+
+.contactinfo {
+  top: auto;
+
+}
+
+/* Add this to your existing CSS */
+.scroll-arrow {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1001; /* higher than other z-index values */
+  cursor: pointer;
+  display: none; /* Initially hidden */
+  transition: opacity 0.5s ease-in-out; 
+}
+
+.scroll-arrow img {
+  width: 35px;  /* or whatever pixel size you want */
+  height: 35px; /* or whatever pixel size you want */
 }

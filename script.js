@@ -13,6 +13,26 @@ document.addEventListener("DOMContentLoaded", function() {
         toggleIcon.textContent = '[+]';
       }
     });
+
+    const scrollArrow = document.getElementById("scroll-arrow");
+
+    // Function to check scroll position
+    function checkScroll() {
+      let windowHeight = window.innerHeight;
+      let documentHeight = document.documentElement.scrollHeight;
+      let scrolled = window.scrollY;
+
+      if (scrolled + windowHeight >= documentHeight * 0.9) {
+        scrollArrow.style.display = "none";
+      } else {
+        scrollArrow.style.display = "block";
+      }
+    }
+
+    // Check the scroll position initially and add the scroll event listener
+    checkScroll();
+    window.addEventListener("scroll", checkScroll);
+
   
     // For the info boxes
     const harvestLink = document.querySelector('a[href="http://link-to-harvest-project.com"]');
