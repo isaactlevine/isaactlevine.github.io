@@ -14,7 +14,7 @@ async function saveInputToServer(key, value) {
         "user_input": value
     };
     
-    const response = await fetch("http://localhost:8000/save_input", {
+    const response = await fetch("https://atelier-401500.uw.r.appspot.com/api/save_input", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -129,7 +129,7 @@ function openUserInfoBox() {
         console.log("Sending the following user data:", userData);  // Log the data before sending
 
         // Send the collected data to the server
-        const response = await fetch("http://localhost:8000/save_bulk_input", {
+        const response = await fetch("https://atelier-401500.uw.r.appspot.com/api/save_bulk_input", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ data: userData }),  // Wrapped inside a "data" field
@@ -350,7 +350,7 @@ function openUserInfoBox() {
         
 
         // Send the user's message to the server
-        const response = await fetch("http://localhost:8000/chat", {
+        const response = await fetch("https://atelier-401500.uw.r.appspot.com/api/chat", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ message }),
