@@ -19,8 +19,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const tofthLink = document.querySelector('a[href="http://link-to-tofth-research.com"]');
     const harvestInfoBox = document.getElementById('info-box-harvest');
     const tofthInfoBox = document.getElementById('info-box-tofth');
+
+    const overlay = document.getElementById('overlay');
   
     function showInfoBox(infoBox) {
+        console.log("Function showInfoBox triggered"); // Debugging line
+        overlay.style.display = 'block'; // Show the overlay
         infoBox.style.display = 'block';
         setTimeout(() => {
           infoBox.style.opacity = '1';
@@ -28,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   
     function hideInfoBox(infoBox) {
+        overlay.style.display = 'none'; // Hide the overlay
       infoBox.style.opacity = '0';
       setTimeout(() => {
         infoBox.style.display = 'none';
@@ -55,3 +60,4 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
   
+
