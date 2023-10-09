@@ -193,7 +193,7 @@ body {
 
 /* Updated chat box style */
 .chat-box {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: flex-end;
     position: fixed;
