@@ -103,9 +103,9 @@ function openUserInfoBox() {
 
     const inputFields = [
         { field: "Who are you?", label: "Answer with demographics, descriptions, stories, whatever." },
-        { field: "What brings you joy when days are long?", label: "Anything goes" },
-        { field: "What wisdoms have shaped the person you've become?", label: "Anything goes" },
-        { field: "What harsh lessons taught you empathy?", label: "Anything goes" }
+        { field: "How do you like to spend your mornings?", label: "Anything goes" },
+        { field: "What's a truth that you've learned in the past month?", label: "Anything goes" },
+        { field: "Why are you talking to an AI?", label: "Anything goes" }
     ];
 
     inputFields.forEach(({ field, label }) => {
