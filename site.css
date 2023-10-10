@@ -229,10 +229,10 @@ h1 {
 
 .info-box {
   opacity: 0;
-  width: 50%;  /* Adjust as needed */
+  width: 50%;
   height: 40%;
   display: none;
-  position: absolute;  /* Changed from absolute to fixed for centering */
+  position: fixed;  /* Changed from absolute to fixed for centering */
   top: 50%;
   left: 50%;  /* Centering on the X-axis */
   transform: translate(-50%, -50%);  /* Combined transformations */
@@ -240,12 +240,12 @@ h1 {
   padding: 20px;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-  transition: opacity 0.1s ease-in-out;
-  /* transition: opacity 0.1s ease-in; */
-  max-height: 400px;  /* You can adjust this value */
+  transition: opacity 0.3s ease-in-out;  /* Increased duration for better visibility */
+  max-height: 400px;
   overflow-y: auto;
   z-index: 2;
 }
+
 
 .info-box-close {
   position: absolute;
