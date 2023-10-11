@@ -1,2 +1,2 @@
 # isaactlevine.github.io
-my website
+Isaac Levine's website
