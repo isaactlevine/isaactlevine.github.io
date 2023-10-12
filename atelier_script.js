@@ -279,6 +279,8 @@ function openUserInfoBox() {
         // document.body.classList.add('blur-background');
     }
 
+    openAtelierInfo(); 
+
     // Function to close the 'atelierinfo' window
     function closeAtelierInfo() {
         atelierInfo.style.opacity = 0; // Set opacity to 0 to hide it
