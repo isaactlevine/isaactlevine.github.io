@@ -9,14 +9,7 @@ body {
   margin: 0;
   padding: 0;
   /* Add the radial gradient background code here */
-  background: radial-gradient(circle at 50% 50%, #D8DADC, transparent 100%),
-              radial-gradient(circle at 30% 70%, #D8DADC, transparent 100%),
-              radial-gradient(circle at 70% 30%, #D8DADC, transparent 100%),
-              radial-gradient(circle at 80% 80%, #c8d5bb, transparent 100%),
-              radial-gradient(circle at 20% 20%, #E7E7EB, transparent 100%),
-              radial-gradient(circle at 60% 40%, #D8DADC, transparent 100%),
-              radial-gradient(circle at 40% 60%, #80989b, transparent 100%),
-              radial-gradient(circle at 90% 10%, #c8d5bb, transparent 100%);
+  background: #ECF0F3;
   background-size: 200% 200%; /* Adjust the background-size for more intense changes */
 }
 
@@ -103,12 +96,12 @@ body {
   .button-60 {
     align-items: center;
     appearance: none;
-    background-color: #fff;
+    background-color: #DDD9DB;
     border: 1px solid #dbdbdb;
     border-radius: .375em;
     box-shadow: rgba(123, 123, 123, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
     box-sizing: border-box;
-    color: #203b1b;
+    color: black;
     cursor: pointer;
     display: inline-flex;
     font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
